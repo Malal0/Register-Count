@@ -32,8 +32,8 @@ inputs.forEach((each) => {
 
 resetBtn.addEventListener('click', () => {
     inputs.forEach((input) => input.value = 0)
-    total = 0;
-    totalText.innerHTML = 0.00;
+    total = (0).toFixed(2);
+    totalText.innerHTML = total;
     //needs cash object to be reseted!!!!
     console.log(cash);
 })
