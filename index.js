@@ -1,5 +1,6 @@
 const inputs = document.querySelectorAll('input');
 const totalText = document.querySelector('#total');
+const resetBtn = document.querySelector('#reset-btn');
 
 let total = 0;
 
@@ -15,24 +16,24 @@ const cash = {
     "one hundred dollars": 0,
 };
 
-inputs.forEach((each) => {
-    each.addEventListener('input', (e) => updateTotal(e))
-});
-
 function updateTotal(e) {
     const dataSet = e.target.dataset;
     cash[dataSet.name] = e.target.value * parseInt(dataSet.value);
-
     //code for adding cash totals
     const arr = Object.values(cash);
     total = arr.reduce((total, num) => total + num, 0);
     //code for adding cash totals
-
-    // console.log(cash);
-    console.log(total);
-    totalText.innerHTML = total / 100;
+    totalText.innerHTML = (total / 100).toFixed(2);
 };
 
-Object.keys(cash).forEach((key) => console.log(cash[key]));
+inputs.forEach((each) => {
+    each.addEventListener('input', (e) => updateTotal(e))
+});
 
-console.log(Object.keys(cash));
+resetBtn.addEventListener('click', () => {
+    inputs.forEach((input) => input.value = 0)
+    total = 0;
+    totalText.innerHTML = 0.00;
+    //needs cash object to be reseted!!!!
+    console.log(cash);
+})
