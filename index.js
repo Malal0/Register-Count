@@ -27,13 +27,18 @@ function updateTotal(e) {
 };
 
 inputs.forEach((each) => {
-    each.addEventListener('input', (e) => updateTotal(e))
+    each.addEventListener('input', (e) => {
+        if (each.value === '') {
+            each.value = 0;
+        }
+        updateTotal(e);
+    })
 });
 
 resetBtn.addEventListener('click', () => {
     inputs.forEach((input) => input.value = 0)
     total = (0).toFixed(2);
     totalText.innerHTML = total;
-    //needs cash object to be reseted!!!!
-    console.log(cash);
+    const cashArr = Object.keys(cash);
+    cashArr.forEach((key) => cash[key] = 0);
 })
