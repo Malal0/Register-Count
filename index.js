@@ -1,4 +1,5 @@
 const inputs = document.querySelectorAll('input');
+const totalText = document.querySelector('#total');
 
 let total = 0;
 
@@ -21,12 +22,15 @@ inputs.forEach((each) => {
 function updateTotal(e) {
     const dataSet = e.target.dataset;
     cash[dataSet.name] = e.target.value * parseInt(dataSet.value);
-    // console.log(e.target.value * parseInt(dataSet.value));
 
-    Object.keys(cash).forEach((key) => console.log(cash[key]));
+    //code for adding cash totals
+    const arr = Object.values(cash);
+    total = arr.reduce((total, num) => total + num, 0);
+    //code for adding cash totals
 
-    console.log(cash);
+    // console.log(cash);
     console.log(total);
+    totalText.innerHTML = total / 100;
 };
 
 Object.keys(cash).forEach((key) => console.log(cash[key]));
