@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
     margin: auto;
     min-width: 100vw;
     min-height: 100vh;
+    font-size: 1.125em;
 }
 
 #main {
@@ -23,16 +25,36 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
+    padding: 3em 0;
 }
 
 #main div {
     width: 100%;
     /* border: 1px solid red; */
+    padding: .25em 0;
     text-align: center;
     display: flex;
     justify-content: space-between;
 }
 
+#main div label {
+    text-transform: capitalize;
+}
+
 #main div input {
     width: 4em;
+}
+
+.total {
+    text-transform: uppercase;
+    letter-spacing: .25em;
+}
+
+button {
+    font-family: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    padding: 6px 10px;
+    margin-top: 2em;
 }
