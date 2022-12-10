@@ -28,10 +28,12 @@ function updateTotal(e) {
 
 inputs.forEach((each) => {
     each.addEventListener('input', (e) => {
+        updateTotal(e);
+    })
+    each.addEventListener('blur', (e) => {
         if (each.value === '') {
             each.value = 0;
         }
-        updateTotal(e);
     })
 });
 
