@@ -43,6 +43,11 @@ body {
 
 #main div input {
     width: 4em;
+    transition: width 250ms;
+}
+
+#main div input:focus-visible {
+    width: 4.5em;
 }
 
 .total {
