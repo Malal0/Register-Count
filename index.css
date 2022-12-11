@@ -50,6 +50,10 @@ body {
     width: 4.5em;
 }
 
+.error {
+    outline: 3px solid red;
+}
+
 .total {
     text-transform: uppercase;
     letter-spacing: .25em;
