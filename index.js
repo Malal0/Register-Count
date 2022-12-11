@@ -38,7 +38,7 @@ inputs.forEach((each) => {
 });
 
 resetBtn.addEventListener('click', () => {
-    inputs.forEach((input) => input.value = 0);
+    inputs.forEach((input) => input.value = '');
     total = (0).toFixed(2);
     totalText.innerHTML = total;
     const cashArr = Object.keys(cash);
