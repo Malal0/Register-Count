@@ -30,15 +30,15 @@ inputs.forEach((each) => {
     each.addEventListener('input', (e) => {
         updateTotal(e);
     })
-    each.addEventListener('blur', (e) => {
-        if (each.value === '') {
-            each.value = 0;
-        }
-    })
+    // each.addEventListener('blur', (e) => {
+    //     if (each.value === '') {
+    //         each.value = 0;
+    //     }
+    // })
 });
 
 resetBtn.addEventListener('click', () => {
-    inputs.forEach((input) => input.value = 0)
+    inputs.forEach((input) => input.value = 0);
     total = (0).toFixed(2);
     totalText.innerHTML = total;
     const cashArr = Object.keys(cash);
