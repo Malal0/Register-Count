@@ -28,8 +28,8 @@ function updateTotal(e) {
 
 inputs.forEach((each) => {
     each.addEventListener('input', (e) => {
-        console.log(parseFloat(each.value))
-        if (parseFloat(each.value) || each.value === 0) {
+        console.log(typeof each.value)
+        if (parseFloat(each.value) || each.value == '') {
             each.classList.remove('error');
         } else {
             console.log('error')
