@@ -28,6 +28,16 @@ function updateTotal(e) {
 
 inputs.forEach((each) => {
     each.addEventListener('input', (e) => {
+        console.log(parseFloat(each.value))
+        if (parseFloat(each.value) || each.value === 0) {
+            each.classList.remove('error');
+        } else {
+            console.log('error')
+            each.classList.add('error');
+        }
+
+        //  fix empty above
+
         updateTotal(e);
     })
     each.addEventListener('blur', () => {
