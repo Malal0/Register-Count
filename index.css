@@ -22,7 +22,7 @@ body {
 
 .container {
     height: 100vh;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,12 +31,12 @@ body {
 
 #main {
     width: 15em;
-    /* margin: 0 1em; */
+    margin-bottom: 1em;
     display: flex;
     flex-flow: column;
     align-items: center;
     /* padding: 3em 0; */
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 #main div {
