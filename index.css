@@ -27,11 +27,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 2em;
 }
 
 #main {
     width: 15em;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -77,5 +78,5 @@ button {
     text-transform: uppercase;
     border: none;
     padding: 6px 10px;
-    margin-top: 2em;
+    /* margin-top: 2em; */
 }
