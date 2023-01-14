@@ -22,7 +22,7 @@ body {
 
 .container {
     height: 600px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,11 +91,5 @@ button {
     .container {
         height: 100vh;
         margin: 0;
-        border: 1px solid blue;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 2em;
     }
 }
