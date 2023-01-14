@@ -55,3 +55,20 @@ resetBtn.addEventListener('click', (e) => {
     const cashArr = Object.keys(cash);
     cashArr.forEach((key) => cash[key] = 0);
 })
+
+///////////////
+
+const toggleBtn = document.querySelector('#toggle-btn');
+const toggleContainer = document.querySelector('.toggle-container');
+const body = document.querySelector('body');
+let isDarkMode = true;
+
+toggleContainer.addEventListener('click', toggleDarkMode);
+
+function toggleDarkMode() {
+    isDarkMode ? toggleContainer.classList.add('flex-end') : toggleContainer.classList.remove('flex-end');
+
+    isDarkMode ? body.classList.add('lightmode') : body.classList.remove('lightmode');
+
+    isDarkMode = !isDarkMode;
+}
