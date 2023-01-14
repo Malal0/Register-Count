@@ -21,8 +21,10 @@ body {
 }
 
 .container {
-    height: 100vh;
-    /* border: 1px solid blue; */
+    height: calc(100vh - 2em);
+    /* height: 540px; */
+    margin: 1em;
+    border: 1px solid blue;
     display: flex;
     justify-content: center;
     align-items: center;
