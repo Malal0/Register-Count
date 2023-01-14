@@ -124,9 +124,15 @@ button {
     align-items: center */
 }
 
+#container {
+    position: absolute;
+    top: .25em;
+    right: .25em;
+}
+
 .toggle-container {
-    width: 10em;
-    height: 5em;
+    width: 4em;
+    height: 2.5em;
     border-radius: 5em;
     position: relative;
     border: 4px solid var(--accent);
@@ -139,7 +145,7 @@ button {
 }
 
 .toggle-btn {
-    height: 4.5em;
+    height: 1.5em;
     aspect-ratio: 1;
     border-radius: 50%;
     background: var(--accent);
@@ -150,14 +156,15 @@ button {
 .light,
 .dark {
     position: absolute;
+    color: var(--bg)
 }
 
 .light {
-    left: .5em;
+    right: .5em;
 }
 
 .dark {
-    right: .5em;
+    left: .5em;
 }
 
 .flex-end {

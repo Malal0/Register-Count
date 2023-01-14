@@ -56,7 +56,7 @@ resetBtn.addEventListener('click', (e) => {
     cashArr.forEach((key) => cash[key] = 0);
 })
 
-///////////////
+///////////////code for darkmode toggle
 
 const toggleBtn = document.querySelector('#toggle-btn');
 const toggleContainer = document.querySelector('.toggle-container');
