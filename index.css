@@ -3,6 +3,9 @@
 :root {
     --bg: rgb(29, 29, 29);
     --color: rgb(243, 243, 243);
+
+    /* --bg: #272727; */
+    --accent: #80D39B;
 }
 
 * {
@@ -97,4 +100,71 @@ button {
         height: 100vh;
         margin: 0;
     }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* body, h1{
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+} */
+
+/* :root{
+  --bg: #272727;
+  --accent: #80D39B;
+} */
+
+.container {
+    background-color: var(--bg);
+    color: var(--accent);
+    /* height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center */
+}
+
+.toggle-container {
+    width: 10em;
+    height: 5em;
+    border-radius: 5em;
+    position: relative;
+    border: 4px solid var(--accent);
+    color: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.toggle-btn {
+    height: 4.5em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--accent);
+    transition: 300ms;
+    margin-inline: .25em;
+}
+
+.light,
+.dark {
+    position: absolute;
+}
+
+.light {
+    left: .5em;
+}
+
+.dark {
+    right: .5em;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.lightmode {
+    --bg: #80D39B;
+    --accent: #272727;
 }
