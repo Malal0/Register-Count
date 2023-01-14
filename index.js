@@ -47,7 +47,8 @@ inputs.forEach((each) => {
     })
 });
 
-resetBtn.addEventListener('click', () => {
+resetBtn.addEventListener('click', (e) => {
+    e.preventDefault()
     inputs.forEach((input) => input.value = '');
     total = (0).toFixed(2);
     totalText.innerHTML = total;
